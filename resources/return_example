@@ -1,0 +1,164 @@
+array(18) {
+  [0]=>
+  object(TwitterBot\Models\Tweet)#7 (3) {
+    ["id":"TwitterBot\Models\Tweet":private]=>
+    int(1040173602090491905)
+    ["userScreenname":"TwitterBot\Models\Tweet":private]=>
+    string(7) "Ahumazu"
+    ["text":"TwitterBot\Models\Tweet":private]=>
+    string(142) "@JoeBFlat @DenDen56377908 @ElesRufus @HCR1981 @MartinSchulz Das ist halt echt billig. Der Account folgt ARD und ZDF… https://t.co/i8yfFXLWdd"
+  }
+  [1]=>
+  object(TwitterBot\Models\Tweet)#8 (3) {
+    ["id":"TwitterBot\Models\Tweet":private]=>
+    int(1039631874061164544)
+    ["userScreenname":"TwitterBot\Models\Tweet":private]=>
+    string(11) "leonatorius"
+    ["text":"TwitterBot\Models\Tweet":private]=>
+    string(143) "@JoeBFlat @BMI_Bund Nur weil die meisten jetzt keine trolle sind, heißt es ja nicht dass in Zukunft mehr Trolle kom… https://t.co/t9W8hIn3KD"
+  }
+  [2]=>
+  object(TwitterBot\Models\Tweet)#9 (3) {
+    ["id":"TwitterBot\Models\Tweet":private]=>
+    int(1039627879712272384)
+    ["userScreenname":"TwitterBot\Models\Tweet":private]=>
+    string(11) "leonatorius"
+    ["text":"TwitterBot\Models\Tweet":private]=>
+    string(142) "@JoeBFlat @BMI_Bund Geht ja nicht um Bots, sondern um Trolle. Also einfach Leute die nur zum provozieren da sind un… https://t.co/9jaa2w1xef"
+  }
+  [3]=>
+  object(TwitterBot\Models\Tweet)#10 (3) {
+    ["id":"TwitterBot\Models\Tweet":private]=>
+    int(1039625606751760390)
+    ["userScreenname":"TwitterBot\Models\Tweet":private]=>
+    string(11) "leonatorius"
+    ["text":"TwitterBot\Models\Tweet":private]=>
+    string(61) "@JoeBFlat @BMI_Bund Aha, und woran wollen Sie das festmachen?"
+  }
+  [4]=>
+  object(TwitterBot\Models\Tweet)#11 (3) {
+    ["id":"TwitterBot\Models\Tweet":private]=>
+    int(1039624783049248770)
+    ["userScreenname":"TwitterBot\Models\Tweet":private]=>
+    string(11) "leonatorius"
+    ["text":"TwitterBot\Models\Tweet":private]=>
+    string(35) "@JoeBFlat @BMI_Bund Doch, durchaus."
+  }
+  [5]=>
+  object(TwitterBot\Models\Tweet)#12 (3) {
+    ["id":"TwitterBot\Models\Tweet":private]=>
+    int(1038478721060167680)
+    ["userScreenname":"TwitterBot\Models\Tweet":private]=>
+    string(13) "knutfriedrich"
+    ["text":"TwitterBot\Models\Tweet":private]=>
+    string(59) "@WernerNowak4 @JoeBFlat @tagesschau https://t.co/xWhmJge5r4"
+  }
+  [6]=>
+  object(TwitterBot\Models\Tweet)#13 (3) {
+    ["id":"TwitterBot\Models\Tweet":private]=>
+    int(1038422036354355200)
+    ["userScreenname":"TwitterBot\Models\Tweet":private]=>
+    string(13) "knutfriedrich"
+    ["text":"TwitterBot\Models\Tweet":private]=>
+    string(147) "@WernerNowak4 @JoeBFlat @tagesschau Dieses Argument mit „in den Spiegel schauen“ hörst du von diesen geistigen Tief… https://t.co/5ZLJTn1EOI"
+  }
+  [7]=>
+  object(TwitterBot\Models\Tweet)#14 (3) {
+    ["id":"TwitterBot\Models\Tweet":private]=>
+    int(1038404397057753094)
+    ["userScreenname":"TwitterBot\Models\Tweet":private]=>
+    string(10) "BKoeniguer"
+    ["text":"TwitterBot\Models\Tweet":private]=>
+    string(55) "@JoeBFlat @Sebasti78183621 @janboehm you I like better."
+  }
+  [8]=>
+  object(TwitterBot\Models\Tweet)#15 (3) {
+    ["id":"TwitterBot\Models\Tweet":private]=>
+    int(1038193968234807298)
+    ["userScreenname":"TwitterBot\Models\Tweet":private]=>
+    string(11) "UweWolff966"
+    ["text":"TwitterBot\Models\Tweet":private]=>
+    string(86) "@bikerdoktor @fhhffghj @JoeBFlat @RobertHabeck Es war eine Hetzjagd auf Frauen #Köln."
+  }
+  [9]=>
+  object(TwitterBot\Models\Tweet)#16 (3) {
+    ["id":"TwitterBot\Models\Tweet":private]=>
+    int(1038177867975286785)
+    ["userScreenname":"TwitterBot\Models\Tweet":private]=>
+    string(11) "bikerdoktor"
+    ["text":"TwitterBot\Models\Tweet":private]=>
+    string(143) "@fhhffghj @JoeBFlat @RobertHabeck Sie stellen Zusammenhänge her, die einfach nichts, aber auch garnichts mit einand… https://t.co/laVNQKmKgu"
+  }
+  [10]=>
+  object(TwitterBot\Models\Tweet)#17 (3) {
+    ["id":"TwitterBot\Models\Tweet":private]=>
+    int(1038155278309646336)
+    ["userScreenname":"TwitterBot\Models\Tweet":private]=>
+    string(13) "knutfriedrich"
+    ["text":"TwitterBot\Models\Tweet":private]=>
+    string(112) "@WernerNowak4 @JoeBFlat @tagesschau Jetzt weiß ich aber immer noch nicht, was „Linksversifft“ nun bedeutet!"
+  }
+  [11]=>
+  object(TwitterBot\Models\Tweet)#18 (3) {
+    ["id":"TwitterBot\Models\Tweet":private]=>
+    int(1038024227780284416)
+    ["userScreenname":"TwitterBot\Models\Tweet":private]=>
+    string(11) "ray55803495"
+    ["text":"TwitterBot\Models\Tweet":private]=>
+    string(141) "@JoeBFlat @TheGoodGodAbove Your probably right but at least  i honor my country and have respect for my president,… https://t.co/f1Ta07ix1S"
+  }
+  [12]=>
+  object(TwitterBot\Models\Tweet)#19 (3) {
+    ["id":"TwitterBot\Models\Tweet":private]=>
+    int(1037792360640512000)
+    ["userScreenname":"TwitterBot\Models\Tweet":private]=>
+    string(9) "KayKayRi1"
+    ["text":"TwitterBot\Models\Tweet":private]=>
+    string(143) "@JoeBFlat @ralphruthe Ist halt das Streben nach einer Nation. Da trennen sich Wege. Für mich bedeutet Nation z.B. g… https://t.co/iaymltyKFY"
+  }
+  [13]=>
+  object(TwitterBot\Models\Tweet)#20 (3) {
+    ["id":"TwitterBot\Models\Tweet":private]=>
+    int(1037688993675128832)
+    ["userScreenname":"TwitterBot\Models\Tweet":private]=>
+    string(8) "iostatus"
+    ["text":"TwitterBot\Models\Tweet":private]=>
+    string(119) "@aranxo @JoeBFlat @nicolediekmann Kluge Analysen, _trotz_ schlechter Laune wegen den politischen Tagesaktualitäten ;-)"
+  }
+  [14]=>
+  object(TwitterBot\Models\Tweet)#21 (3) {
+    ["id":"TwitterBot\Models\Tweet":private]=>
+    int(1037650313250070529)
+    ["userScreenname":"TwitterBot\Models\Tweet":private]=>
+    string(10) "ManuMarron"
+    ["text":"TwitterBot\Models\Tweet":private]=>
+    string(70) "@JoeBFlat @Timao1909 @f_karig denkt Euch doch mal ne neue Leier aus..."
+  }
+  [15]=>
+  object(TwitterBot\Models\Tweet)#22 (3) {
+    ["id":"TwitterBot\Models\Tweet":private]=>
+    int(1037315799080476673)
+    ["userScreenname":"TwitterBot\Models\Tweet":private]=>
+    string(9) "TaSSAu_DE"
+    ["text":"TwitterBot\Models\Tweet":private]=>
+    string(73) "@JoeBFlat @Fraeulein_vonH Meinst du eure Hymne !? https://t.co/TuuW6mEHL1"
+  }
+  [16]=>
+  object(TwitterBot\Models\Tweet)#23 (3) {
+    ["id":"TwitterBot\Models\Tweet":private]=>
+    int(1036998258370011141)
+    ["userScreenname":"TwitterBot\Models\Tweet":private]=>
+    string(6) "aranxo"
+    ["text":"TwitterBot\Models\Tweet":private]=>
+    string(77) "@JoeBFlat @iostatus @nicolediekmann Keine schlechte Laune, nur kluge Analyse."
+  }
+  [17]=>
+  object(TwitterBot\Models\Tweet)#24 (3) {
+    ["id":"TwitterBot\Models\Tweet":private]=>
+    int(1035874362094546944)
+    ["userScreenname":"TwitterBot\Models\Tweet":private]=>
+    string(13) "politikkaspar"
+    ["text":"TwitterBot\Models\Tweet":private]=>
+    string(141) "@kw_ritter @JoeBFlat @gpause @maybritillner @katarinabarley Du legst dir selbst Denkverbote auf wenn du dich einer… https://t.co/dWageE7b4W"
+  }
+}

@@ -1,0 +1,36 @@
+## Twitter Accounts ##
+Dev
+massi.brero@gmail.com
+JoeBFlat
+sl...77...
+
+User1
+zero_stack_tomcat @StackZero
+massi.brero@enet
+b...1
+
+User2
+mrchapman60 @mrchapman60
+massi1@enet
+b...1
+
+API key
+PH2gasa5OnXutfkAksG6AgXOE
+
+API secret key
+cpQ1llsO6JxMjq1qiirk2dNvrgjh2fj7QTtx9dli5J1Mu6lwNs
+
+Access token & access token secret
+825389383570300930-Sn8UXIpjfa9qSfps8lF3mO24MLs8DH7 (Access token)
+xUKyFGgsf6ld0SIfqOB6ZutvnSjXfTiVBANxqxoZG8zSy (Access token secret)
+Read and write (Access level)
+
+IBM Cloud
+massi.brero@gmail.com
+Biber123456!
+https://gateway.watsonplatform.net/tone-analyzer/api
+04fec4af-e958-46da-a0c4-2db72b4f0f0e
+BGn4eH3HAMSG
+
+https://console.bluemix.net/services/tone-analyzer/d0029416-4e08-4446-80d5-2ef927b4bbf8/?paneId=credentials&new=true&env_id=ibm:yp:eu-gb&org=1eaa3d94-bbfc-4a74-999b-8c84025440a9&space=02a55588-e16c-40a8-8438-9aee2679cb48
+curl -X GET "https://04fec4af-e958-46da-a0c4-2db72b4f0f0e:BGn4eH3HAMSG@gateway.watsonplatform.net/tone-analyzer/api/v3/tone?version=2017-09-21&text=Team%2C%20I%20know%20that%20times%20are%20tough%21%20Product%20sales%20have%20been%20disappointing%20for%20the%20past%20three%20quarters.%20We%20have%20a%20competitive%20product%2C%20but%20we%20need%20to%20do%20a%20better%20job%20of%20selling%20it%21"
