@@ -3,6 +3,7 @@
 namespace TwitterBot;
 use Symfony\Component\Dotenv\Dotenv;
 use TwitterBot\Controllers\TwitterBotController;
+use TwitterBot\Models\SentimentAnalyzerFactory;
 use TwitterBot\Models\TwitterBotModel;
 use Codebird\Codebird;
 
@@ -30,8 +31,10 @@ class App
         try
         {
             $twitterModel = new TwitterBotModel($app->getCodeBird());
+            $analyzer = SentimentAnalyzerFactory::getAnalyzer(SentimentAnalyzerFactory::WATSON);
             $twitterCtrl = new TwitterBotController();
             $twitterCtrl->setModel($twitterModel);
+            $twitterCtrl->setAnalyzer($analyzer);
             $twitterCtrl->startBot();
         }
         catch (\Exception $e)

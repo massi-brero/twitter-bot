@@ -13,8 +13,15 @@ use GuzzleHttp\Client;
 
 class WatsonToneAnalyzer implements Analyzer
 {
-    const SERVICE_PATH = 'tone-analyzer/api/v3/tone';
-    const SERVICE_VERSION = 'version=2017-09-21';
+    private const SERVICE_PATH = 'tone-analyzer/api/v3/tone';
+    private const SERVICE_VERSION = '2017-09-21';
+    const EMOTION_SAD = 'sadness';
+    const EMOTION_FEAR = 'fear';
+    const EMOTION_JOY = 'joy';
+    const EMOTION_ANGER = 'sadness';
+    const LANGUAGE_ANALYTICAL = 'analytical';
+    const LANGUAGE_CONFIDENT = 'confident';
+    const LANGUAGE_TENTATIVE = 'tentative';
 
     private $user = '';
     private $password = '';
@@ -33,6 +40,11 @@ class WatsonToneAnalyzer implements Analyzer
          ]);
     }
 
+    /**
+     * @param string $user
+     * @param string $pw
+     * @throws \Exception
+     */
     public function setCredentials(string $user, string $pw) : void
     {
         if (empty($user) || empty($pw))
@@ -45,17 +57,21 @@ class WatsonToneAnalyzer implements Analyzer
     }
 
     /**
-     * Sends text to the Watsone tone analyzer and returns the result json;
-     *
+     * Sends text to the Watson tone analyzer and returns the result json;
      * @param string $text
-     * @return mixed
+     * @return array
+     * @throws \Exception
      */
     public function getAnalyzedText(string $text) : array
     {
-        var_dump($this->user . ' ' . $this->password);
+        $headers = ['headers' => [
+            'Content-Type' => 'text/plain;charset=utf-8',
+            ]
+        ];
         $params = [
+            $headers,
             'query' => [
-                'version' => '2017-09-21',
+                'version' => self::SERVICE_VERSION,
                 'text' => $this->normalizeText($text),
             ],
             'auth' => [
@@ -65,16 +81,24 @@ class WatsonToneAnalyzer implements Analyzer
         ];
 
         /*
-         * We even send the result of an empty tweet;
+         * We even send the response of an empty tweet;
          */
-        $result = $this->client->get(self::SERVICE_PATH, $params)->getBody();
+        $response = $this->client->get(self::SERVICE_PATH, $params);
+        $body = $response->getBody();
 
-        if (empty($result))
+        if (empty($response) || $response->getStatusCode() != 200)
         {
-            throw new \Exception('Not expected answer from Watson API.');
+            $code =  $response ?  $response->getStatusCode() : null;
+            throw new \Exception(
+                sprintf('Error from Watson API. - Code: %i - Message: %s', $response->getStatusCode()),
+                $body
+            );
         }
 
-        return json_decode($result, true);
+        var_dump($body);
+        die;
+
+        return json_decode($body, true);
     }
 
     private function normalizeText(string $text) : string
