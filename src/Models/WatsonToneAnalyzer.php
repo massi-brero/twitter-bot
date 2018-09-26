@@ -84,19 +84,16 @@ class WatsonToneAnalyzer implements Analyzer
          * We even send the response of an empty tweet;
          */
         $response = $this->client->get(self::SERVICE_PATH, $params);
-        $body = $response->getBody();
+        $body = (string) $response->getBody();
 
         if (empty($response) || $response->getStatusCode() != 200)
         {
             $code =  $response ?  $response->getStatusCode() : null;
             throw new \Exception(
-                sprintf('Error from Watson API. - Code: %i - Message: %s', $response->getStatusCode()),
+                sprintf('Error from Watson API. - Code: %i - Message: %s', $code),
                 $body
             );
         }
-
-        var_dump($body);
-        die;
 
         return json_decode($body, true);
     }

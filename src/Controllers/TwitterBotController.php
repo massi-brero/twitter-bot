@@ -26,11 +26,11 @@ class TwitterBotController
         if (is_array($mentions) && count($mentions) > 0)
         {
             $emotions = array_map(function ($mention) {
-                $this->analyzer->getAnalyzedText($mention);
-            });
+                return $this->analyzer->getAnalyzedText($mention->getText());
+            }, $mentions);
         }
 
-        var_dump($emotions);
+        print_r($emotions);
 
     }
 
