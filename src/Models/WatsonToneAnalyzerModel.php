@@ -11,14 +11,14 @@ use GuzzleHttp\Client;
 
 
 
-class WatsonToneAnalyzer implements Analyzer
+class WatsonToneAnalyzerModel implements Analyzer
 {
     private const SERVICE_PATH = 'tone-analyzer/api/v3/tone';
     private const SERVICE_VERSION = '2017-09-21';
     const EMOTION_SAD = 'sadness';
     const EMOTION_FEAR = 'fear';
     const EMOTION_JOY = 'joy';
-    const EMOTION_ANGER = 'sadness';
+    const EMOTION_ANGER = 'anger';
     const LANGUAGE_ANALYTICAL = 'analytical';
     const LANGUAGE_CONFIDENT = 'confident';
     const LANGUAGE_TENTATIVE = 'tentative';

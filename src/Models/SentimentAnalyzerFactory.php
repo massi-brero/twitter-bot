@@ -1,15 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: massi
- * Date: 23.09.18
- * Time: 15:33
- */
 
 namespace TwitterBot\Models;
-
-
-use phpDocumentor\Reflection\Types\Object_;
 
 class SentimentAnalyzerFactory
 {
@@ -39,7 +30,7 @@ class SentimentAnalyzerFactory
         $user = getenv('WATSON_USER');
         $pw = getenv('WATSON_PASSWORD');
 
-        $analyzer = new WatsonToneAnalyzer();
+        $analyzer = new WatsonToneAnalyzerModel();
         $analyzer->setCredentials($user, $pw);
 
         return $analyzer;

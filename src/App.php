@@ -40,7 +40,7 @@ class App
         catch (\Exception $e)
         {
             //todo log this
-            echo ($e->getMessage());
+            echo $e;
         }
 
     }
