@@ -1,12 +1,10 @@
 <?php
 namespace TwitterBot\Controllers;
 
-use function GuzzleHttp\default_user_agent;
 use TwitterBot\Models\Analyzer;
 use TwitterBot\Models\EmailModel;
 use TwitterBot\Models\TwitterBotModel;
 use TwitterBot\Models\WatsonToneAnalyzerModel;
-use TwitterBot\TwitterConfig;
 
 class TwitterBotController
 {

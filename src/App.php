@@ -37,7 +37,7 @@ class App
             $twitterCtrl->setModel($twitterModel);
             $twitterCtrl->setEmailModel(new EmailModel());
             $twitterCtrl->setAnalyzer($analyzer);
-            //$twitterCtrl->startBot();
+            $twitterCtrl->startBot();
 
             $twitterCtrl->sendStatisticsMail();
         }
