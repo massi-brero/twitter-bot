@@ -102,7 +102,7 @@ class TwitterBotController
         $subject = getenv('MAIL_SUBJECT') . ' ' . date('d.m.Y H:i:s');
 
         $message = "Hallo Massi,\nhier die aktuellen Tweet Stats:\n" .
-        "Gesamt: " . $statistics->getTotal() ."%\n" .
+        "Gesamt: " . $statistics->getTotal() ."\n" .
         "Freude: " . number_format($statistics->getJoyPercentage() * 100,2) . "%\n".
         "Ärger: " . number_format($statistics->getAngryPercentage() * 100,2) . "%\n" .
         "Traurig: " . number_format($statistics->getSadPercentage() * 100,2) . "%\n" .
