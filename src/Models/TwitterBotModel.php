@@ -171,6 +171,64 @@ class TwitterBotModel
     }
 
 
+    public function fetchAll()
+    {
+        try
+        {
+            return $this->db->query(sprintf('SELECT * FROM %s', getenv('DB_MENTION_TABLE')))
+                            ->fetchAll();
+        } catch (\PDOException $e)
+        {
+            throw $e;
+        }
+    }
+
+    public function getStatistics()
+    {
+        $result = $this->db->query(sprintf('SELECT * FROM %s', getenv('DB_MENTION_TABLE')))
+                       ->fetchAll();
+        $statistics = new TwitterStatistic();
+
+        if(!empty($result))
+        {
+            $total = count($result);
+            $joy = 0;
+            $anger = 0;
+            $fear = 0;
+            $sad = 0;
+
+            foreach ($result as $entry)
+            {
+                if(isset($entry['emotion']))
+                {
+                    switch ($entry['emotion'])
+                    {
+                        case WatsonToneAnalyzerModel::EMOTION_ANGER:
+                            $anger++;
+                            break;
+                        case WatsonToneAnalyzerModel::EMOTION_JOY:
+                            $joy++;
+                            break;
+                        case WatsonToneAnalyzerModel::EMOTION_SAD:
+                            $sad++;
+                            break;
+                        case WatsonToneAnalyzerModel::EMOTION_FEAR:
+                            $fear++;
+                            break;
+                    }
+                }
+            }
+            $statistics->setTotal($total);
+            $statistics->setAngryPercentage($anger / $total);
+            $statistics->setJoyPercentage($joy / $total);
+            $statistics->setSadPercentage($sad / $total);
+            $statistics->setFearPercentage($fear / $total);
+        }
+        return $statistics;
+    }
+
+
+
     protected function getLastID() : string
     {
         try
