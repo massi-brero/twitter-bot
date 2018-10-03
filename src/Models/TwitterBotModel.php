@@ -3,7 +3,6 @@
 namespace TwitterBot\Models;
 
 use Codebird\Codebird;
-use Symfony\Component\Dotenv\Dotenv;
 
 class TwitterBotModel
 {
@@ -134,11 +133,13 @@ class TwitterBotModel
 
         try
         {
+            $id = $tweet->getId();
+            $text = $tweet->getText();
             $stmt = sprintf('INSERT INTO %s VALUES' .
                      ' (NULL, :mention_id, :tweet, :emotion, :reply, :analyzer, NOW())', getenv('DB_MENTION_TABLE'));
             $sql = $this->db->prepare($stmt);
-            $sql->bindParam('mention_id', $tweet->getId(), \PDO::PARAM_INT);
-            $sql->bindParam('tweet', $tweet->getText(), \PDO::PARAM_STR);
+            $sql->bindParam('mention_id', $id, \PDO::PARAM_INT);
+            $sql->bindParam('tweet', $text, \PDO::PARAM_STR);
             $sql->bindParam('emotion', $emotion, \PDO::PARAM_STR);
             $sql->bindParam('reply', $reply, \PDO::PARAM_STR);
             $sql->bindParam('analyzer', $analyzer, \PDO::PARAM_STR);

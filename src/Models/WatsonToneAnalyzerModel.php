@@ -10,11 +10,10 @@ namespace TwitterBot\Models;
 use GuzzleHttp\Client;
 
 
-
 class WatsonToneAnalyzerModel implements Analyzer
 {
-    private const SERVICE_PATH = 'tone-analyzer/api/v3/tone';
-    private const SERVICE_VERSION = '2017-09-21';
+    const SERVICE_PATH = 'tone-analyzer/api/v3/tone';
+    const SERVICE_VERSION = '2017-09-21';
     const EMOTION_SAD = 'sadness';
     const EMOTION_FEAR = 'fear';
     const EMOTION_JOY = 'joy';
