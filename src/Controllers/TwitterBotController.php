@@ -99,17 +99,18 @@ class TwitterBotController
     public function sendStatisticsMail()
     {
         $statistics = $this->model->getStatistics();
+        $subject = getenv('MAIL_SUBJECT') . ' ' . date('d.m.Y H:i:s');
 
-        $message = "Hallo Massi,\n hier die aktuellen Tweet Stats:\n\n\n\n" .
-        'Gesamt:' . $statistics->getTotal() .'\n\n' .
-        'Freude:' . $statistics->getJoyPercentage() . '\n\n'.
-        'Ärger:' . $statistics->getAngryPercentage() . '\n\n' .
-        'Traurig:' . $statistics->getSadPercentage() . '\n\n' .
-        'Angst:' . $statistics->getFearPercentage() . '\n\n';
+        $message = "Hallo Massi,\nhier die aktuellen Tweet Stats:\n" .
+        "Gesamt: " . $statistics->getTotal() ."%\n" .
+        "Freude: " . number_format($statistics->getJoyPercentage() * 100,2) . "%\n".
+        "Ärger: " . number_format($statistics->getAngryPercentage() * 100,2) . "%\n" .
+        "Traurig: " . number_format($statistics->getSadPercentage() * 100,2) . "%\n" .
+        "Angst: " . number_format($statistics->getFearPercentage() * 100,2) . "%\n";
 
         $success = $this->email->send(
             getenv('MAIL_TO'),
-            getenv('MAIL_SUBJECT'),
+            $subject,
             $message
         );
 
